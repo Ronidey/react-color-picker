@@ -1,0 +1,100 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: #fff;
+  line-height: 1.45;
+  font-family: $ff;
+  overflow-x: hidden;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0 0 1rem 0;
+  font-weight: 400;
+}
+
+button {
+  cursor: pointer;
+  padding: 0.4rem 0.5rem;
+}
+
+// Input range
+input[type='range'] {
+  -webkit-appearance: none;
+  width: 100%;
+  background: transparent;
+}
+
+input[type='range']:focus {
+  outline: 0;
+}
+
+// Range thumb for Chorome
+input[type='range']::-webkit-slider-thumb {
+  @include thumb;
+}
+
+// Range track for Chorome
+input[type='range']::-webkit-slider-runnable-track {
+  @include track;
+}
+
+// Range thumb for firefox
+input[type='range']::-moz-range-thumb {
+  @include thumb;
+}
+
+// Range track for firefox
+input[type='range']::-moz-range-track {
+  @include track;
+}
+
+// Range thumb for IE
+input[type='range']::-ms-thumb {
+  @include thumb;
+}
+
+// Range track for IE
+input[type='range']::-ms-track {
+  @include track;
+}
+
+// For IE
+input[type='range']::-ms-fill-lower,
+input[type='range']::-ms-fill-upper {
+  background: transparent;
+}
+
+input[type='text'] {
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+  color: #555;
+  letter-spacing: 1px;
+}
+
+.app {
+  max-width: 1400px;
+  margin: auto;
+}

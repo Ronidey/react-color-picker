@@ -1,0 +1,41 @@
+$colors: '';
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+
+$ff: 'Poppins', sans-serif;
+
+@for $i from 1 through 36 {
+  @if ($i == 36) {
+    $colors: $colors + 'hsl(' + $i * 10 + ', 100%, 50%)'; // Don't add ',' if i == 36, last item
+  } @else {
+    $colors: $colors + 'hsl(' + $i * 10 + ', 100%, 50%),';
+  }
+}
+
+@mixin thumb {
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #ffffff;
+  cursor: pointer;
+  margin-top: -6px;
+  -webkit-box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+}
+
+@mixin track {
+  width: 100%;
+  height: 10px;
+  cursor: pointer;
+  border-radius: 1rem;
+  background: #efefef;
+}
+
+// Media Query
+@mixin m-query($size) {
+  @media screen and (min-width: $size) {
+    @content;
+  }
+}

@@ -1,0 +1,108 @@
+// Watermark smile
+.smile {
+  position: absolute;
+  top: 0rem;
+  width: 300px;
+  fill: currentColor;
+  opacity: 0.1;
+  right: 2rem;
+  z-index: -1;
+
+  @include m-query(800px) {
+    right: auto;
+    top: 25%;
+    width: 400px;
+  }
+}
+
+.control-box {
+  background: #fff;
+  padding: 2rem 1.5rem;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+  margin-bottom: 2rem;
+
+  @include m-query(800px) {
+    position: absolute;
+    top: 10%;
+    right: 2rem;
+    width: 45%;
+  }
+}
+
+.range-group {
+  margin-bottom: 2rem;
+
+  .hue-range::-webkit-slider-runnable-track {
+    background: linear-gradient(to right, #{$colors});
+  }
+
+  .hue-range::-moz-range-track {
+    background: linear-gradient(to right, #{$colors});
+  }
+
+  .hue-range::-ms-track {
+    background: linear-gradient(to right, #{$colors});
+  }
+}
+
+// Value group
+.color-value-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+
+  input {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+  }
+}
+
+.label {
+  display: inline-block;
+  width: 100%;
+  font-size: 1.1rem;
+  margin-bottom: 0.8rem;
+  color: #555;
+}
+.circle {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 1rem;
+}
+
+// Button
+.btn-wrapper {
+  text-align: right;
+}
+
+.btn-random {
+  background: #4b32e3;
+  color: #fff;
+  border: 0;
+  border-radius: 2px;
+  -webkit-transition: -webkit-transform 200ms ease-in-out;
+  transition: -webkit-transform 200ms ease-in-out;
+  -o-transition: transform 200ms ease-in-out;
+  transition: transform 200ms ease-in-out;
+  transition: transform 200ms ease-in-out, -webkit-transform 200ms ease-in-out;
+
+  &:focus,
+  &:hover {
+    outline: 0;
+    background: darken(#4b32e3, 15%);
+  }
+
+  &:active {
+    -webkit-transform: scale(0.95);
+    -ms-transform: scale(0.95);
+    transform: scale(0.95);
+  }
+}
